@@ -1,0 +1,29 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2" author="marcin">
+        <createTable tableName="humans">
+            <column  name="id"  type="bigint" autoIncrement="true"/>
+            <column  name="name"  type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3" author="marcin">
+        <insert tableName="humans">
+            <column  name="name"  value="HumanName HumanSurname"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="4" author="marcin">
+        <insert tableName="humans">
+            <column  name="name"  value="Edyta Lopata"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
